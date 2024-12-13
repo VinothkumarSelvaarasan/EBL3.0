@@ -5,6 +5,11 @@
     <fullyQualifiedTypeName name="classPgm.SimpleConstrutor"/>
     <fullyQualifiedTypeName name="classPgm.ThisKeyWord"/>
     <fullyQualifiedTypeName name="DataEncapsulation.Registeration"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="DataEncapsulation.DataEncapsulation"/>
+    <fullyQualifiedTypeName name="StaticPgm.StaticBlock"/>
+    <fullyQualifiedTypeName name="StaticPgm.StaticVariable"/>
+    <fullyQualifiedTypeName name="StaticPgm.StaticMethod"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="SingleInheritance.CarDetails"/>
+    <fullyQualifiedTypeName name="SuperKeyword.ChildClass"/>
 </qualifiedTypeNameHistroy>
