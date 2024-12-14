@@ -12,4 +12,10 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="SingleInheritance.CarDetails"/>
     <fullyQualifiedTypeName name="SuperKeyword.ChildClass"/>
+    <fullyQualifiedTypeName name="AbstractClassPgm.parentClass"/>
+    <fullyQualifiedTypeName name="AbstractClassPgm.AbstractPgm"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="InterfacePgm.staff"/>
+    <fullyQualifiedTypeName name="InterfacePgm.InterfaceClass"/>
 </qualifiedTypeNameHistroy>

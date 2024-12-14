@@ -33,7 +33,7 @@ public class AbstractPgm extends parentClass{
 	parentClass pc=new AbstractPgm();
 	AbstractPgm ap=new AbstractPgm();
 	pc.printInfo();
-	pc.getInfo();
+	ap.getInfo();
 //		//ap.printInfo();
 	}
 	
