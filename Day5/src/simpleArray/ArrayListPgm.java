@@ -1,5 +1,6 @@
 package simpleArray;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ArrayListPgm {
@@ -11,6 +12,7 @@ public class ArrayListPgm {
 		sl.add("Adhitya");
 		sl.add("Dileep");
 	
+		
 	Iterator<String> itera=sl.iterator();
 	while(itera.hasNext())
 	{

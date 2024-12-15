@@ -1,6 +1,6 @@
 package EntityArrayList;
 
-public class Registeration {
+public class Registeration{
 	private int registerNo;
 	private String name;
 	private String dept;
@@ -28,6 +28,7 @@ public class Registeration {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
+
 	
 
 }
