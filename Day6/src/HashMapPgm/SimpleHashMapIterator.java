@@ -19,10 +19,7 @@ public class SimpleHashMapIterator {
 			Map.Entry<String, String> me=(Entry<String, String>) iterator.next();
 			System.out.println(me.getKey() + me.getValue());
 			
-		}
-		
-		
-		
+		}	
 	}
 	public static void main(String[] args) {
 		SimpleHashMapIterator smi=new SimpleHashMapIterator();
