@@ -1,8 +1,4 @@
-package com.wecp;
-
-
-import java.util.List;
-import java.util.stream.Collectors;
+package StreamPgrm;
 
 public class Employee {
     private int id;
