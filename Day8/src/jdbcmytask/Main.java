@@ -1,64 +1,54 @@
 package com.wecp;
 
-import com.wecp.connection.DatabaseConnection;
-import com.wecp.dao.BookDAO;
-import com.wecp.dao.BookDAOImpl;
-import com.wecp.entity.Author;
-import com.wecp.entity.Book;
+import com.wecp.dao.StudentDAO;
+import com.wecp.dao.StudentDAOImpl;
+import com.wecp.entity.Student;
+import com.wecp.service.StudentService;
+import com.wecp.service.StudentServiceImpl;
 
 import java.sql.Connection;
-import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            String dbUrl = "jdbc:mysql://localhost:3306/bookDB_wecp";
-            String user = "root";
-            String password = "hellowecp";
-
-            Connection connection = DatabaseConnection.createConnection(dbUrl, user, password);
-            BookDAO bookDAO = new BookDAOImpl(connection);
-
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentDB_wecp",
+         "root", "hellowecp")) {
+            StudentDAO studentDAO = new StudentDAOImpl(connection);
+            StudentService studentService = new StudentServiceImpl(studentDAO);
             Scanner scanner = new Scanner(System.in);
 
-            // Insert 5-6 Books
-            for (int i = 0; i < 2; i++) {
-                System.out.println("Enter book name:");
-                String bookName = scanner.nextLine();
+            // Example of adding a student
+            System.out.println("Enter student name: ");
+            String name = scanner.nextLine();
+            System.out.println("Enter student age: ");
+            int age = Integer.parseInt(scanner.nextLine());
+            System.out.println("Enter student grade: ");
+            String grade = scanner.nextLine();
+            System.out.println("Enter student department: ");
+            String department = scanner.nextLine();
 
-                System.out.println("Enter book release date (YYYY-MM-DD):");
-                String bookReleaseDate = scanner.nextLine();
+            Student student = new Student();
+            student.setName(name);
+            student.setAge(age);
+            student.setGrade(grade);
+            student.setDepartment(department);
 
-                System.out.println("Enter author name:");
-                String authorName = scanner.nextLine();
+            studentService.addStudent(student);
+            System.out.println("Student added successfully!");
 
-                // For simplicity, author is inserted manually. In real cases, use AuthorDAO to insert Author and retrieve authorId.
-                Author author = new Author();
-                author.setAuthorId(1);  // Assume authorId 1 for demonstration.
-
-                Book book = new Book();
-                book.setBookName(bookName);
-                book.setBookReleaseDate(Date.valueOf("2023-09-19"));
-                book.setAuthor(author);
-                bookDAO.insertBook(book);
+            // Fetch all students
+            List<Student> students = studentService.getAllStudents();
+            System.out.println("All Students:");
+            for (Student s : students) {
+                System.out.println(s.getId() + ": " + s.getName() + ", Age: " + s.getAge() + ", Grade: " + s.getGrade() + ", Department: " + s.getDepartment());
             }
-
-            // Select Books by name
-            System.out.println("Enter a book name to search:");
-            String searchBookName = scanner.nextLine();
-
-            List<Book> books = bookDAO.getBooksByName(searchBookName);
-            for (Book book : books) {
-                System.out.println("Book ID: " + book.getBookId() +
-                        ", Book Name: " + book.getBookName() +
-                        ", Release Date: " + book.getBookReleaseDate() +
-                        ", Author: " + book.getAuthor().getAuthorName());
-            }
-
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }
