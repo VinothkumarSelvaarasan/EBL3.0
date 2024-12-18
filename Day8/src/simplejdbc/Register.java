@@ -1,15 +1,14 @@
-package EntityArrayList;
+package simplejdbc;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-public class Registeration{
+public class Register {
 	private int registerNo;
 	private String name;
 	private String dept;
-	public Registeration(int registerNo, String name, String dept) {
-		
+	public Register() {
+
+	}
+	public Register(int registerNo, String name, String dept) {
+		super();
 		this.registerNo = registerNo;
 		this.name = name;
 		this.dept = dept;
@@ -32,12 +31,12 @@ public class Registeration{
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
-    public static void displaySortByName(List<Registeration> registeration) {
-    	registeration.sort(Comparator.comparing(Registeration::getName),Collections.reverseOrder());
-        for (Registeration regi : registeration) {
-            System.out.println(regi);
-        }
-
-    }
+	
+	
+	
+	
+	
+	
+	
 
 }

@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="StaticPgm.StaticBlock"/>
     <fullyQualifiedTypeName name="StaticPgm.StaticVariable"/>
     <fullyQualifiedTypeName name="StaticPgm.StaticMethod"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="SingleInheritance.CarDetails"/>
     <fullyQualifiedTypeName name="SuperKeyword.ChildClass"/>
     <fullyQualifiedTypeName name="AbstractClassPgm.parentClass"/>
@@ -29,4 +28,17 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="HashMapPgm.SimpleHashMapIterator"/>
+    <fullyQualifiedTypeName name="simpleexception.SimpleTryCatch"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="simpleexception.FinallyTryCatch"/>
+    <fullyQualifiedTypeName name="simpleexception.ThrowKeyWordExample"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="CustomizedException.Shopping"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>
